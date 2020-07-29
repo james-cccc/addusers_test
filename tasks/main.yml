@@ -1,0 +1,13 @@
+---
+# tasks file for addusers_test
+- name: Ensure groups exists
+  group:
+    name: "{{ item.groups }}"
+    state: present
+  loop: "{{ users }}"
+
+- name: Create user accounts
+  user:
+    name: "{{ item.username }}"
+    groups: "{{ item.groups }}"
+  loop: "{{ users }}"

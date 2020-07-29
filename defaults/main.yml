@@ -1,0 +1,7 @@
+---
+# defaults file for addusers_test
+users:
+  - username: opsa
+    groups: wheel
+  - username: opsb
+    groups: wheel
