@@ -16,8 +16,11 @@ jobs:
         distro:
           - centos8
     steps:
-      - name: Check out the codebase.
+
+      - name: checkout
         uses: actions/checkout@v2
+        with:
+          path: "${{ github.repository }}" 
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
