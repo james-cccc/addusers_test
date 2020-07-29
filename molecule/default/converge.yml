@@ -1,7 +1,9 @@
 ---
 - name: Converge
   hosts: all
-  tasks:
-    - name: "Include addusers_test"
-      include_role:
-        name: "addusers_test"
+  roles:
+    - role: addusers_test
+#   tasks:
+#     - name: "Include addusers_test"
+#       include_role:
+#         name: "addusers_test"
