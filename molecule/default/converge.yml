@@ -1,8 +1,6 @@
 ---
 - name: Converge
   hosts: all
-    roles:
-    - role: "{{ lookup('env', 'MOLECULE_PROJECT_DIRECTORY') | basename }}"
   tasks:
     - name: "Include addusers_test"
       include_role:
